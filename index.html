@@ -1,0 +1,558 @@
+<html lang="en" class="dark"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Brontolone | AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body class="text-slate-600 dark:text-slate-400 font-sans antialiased selection:bg-indigo-200 selection:text-indigo-900 dark:selection:bg-indigo-500/30 dark:selection:text-indigo-100 min-h-screen font-light transition-colors duration-300 relative z-0">
+    
+    <!-- Colorful Ambient Background -->
+    <div class="fixed inset-0 z-[-1] bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden">
+        <div class="dark:bg-indigo-600/10 blur-[100px] sm:blur-[120px] bg-indigo-400/20 w-[50vw] h-[50vw] rounded-full absolute top-[-10%] left-[-10%]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-purple-400/20 dark:bg-purple-600/10 blur-[100px] sm:blur-[120px]"></div>
+    </div>
+
+    <main class="sm:py-16 flex flex-col max-w-5xl mx-auto pt-10 px-4 pb-16 space-y-16">
+        
+        <!-- Header / Logo -->
+        <header class="w-full flex items-center justify-between">
+            <div class="text-xl font-medium tracking-tighter text-slate-950 dark:text-slate-100 flex items-center gap-1">
+                <span class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white px-2 py-0.5 rounded-md shadow-sm border border-indigo-400/20 dark:border-white/10">DB</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+                <button onclick="toggleTheme()" class="flex items-center justify-center p-1.5 rounded-md bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 backdrop-blur-md transition-all shadow-sm" aria-label="Toggle Theme">
+                    <iconify-icon icon="solar:sun-linear" class="hidden dark:block text-lg"></iconify-icon>
+                    <iconify-icon icon="solar:moon-linear" class="block dark:hidden text-lg"></iconify-icon>
+                </button>
+                <div class="w-px h-4 bg-slate-300 dark:bg-slate-700"></div>
+                <a href="https://github.com/bigshark002" target="_blank" class="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <iconify-icon icon="solar:code-square-linear" class="text-base"></iconify-icon> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/danilo-brontolone-8a8258370/" target="_blank" class="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <iconify-icon icon="solar:link-minimalistic-linear" class="text-base"></iconify-icon> LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <img src="images/photo.png" alt="Danilo Brontolone" class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover ring-2 ring-slate-200/80 dark:ring-slate-700/80 shadow-lg shrink-0">
+                <div class="space-y-4">
+                    <h1 class="text-3xl sm:text-5xl font-medium tracking-tight bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-400 bg-clip-text text-transparent inline-block pb-1">
+                        Danilo Brontolone
+                    </h1>
+                    <h2 class="text-xl sm:text-2xl font-normal tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
+                        AI Engineer &amp; Multi-Agent Systems Developer
+                    </h2>
+                </div>
+            </div>
+            
+            <p class="text-base leading-relaxed text-slate-600 dark:text-slate-400 max-w-2xl">
+                AI Engineer specializing in <span class="text-slate-900 dark:text-slate-200 font-normal">LLM-powered systems</span> and <span class="text-slate-900 dark:text-slate-200 font-normal">multi-agent architectures</span>. I build scalable AI applications using modern ML frameworks, distributed systems, and cloud infrastructure. My work focuses on intelligent automation, agent orchestration, and real-world AI deployment. <span class="text-slate-900 dark:text-slate-200 font-normal">Open to international and EU remote opportunities.</span>
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+                <a href="resume.pdf" download class="flex items-center gap-2 text-sm bg-indigo-600 dark:bg-indigo-500 border border-transparent rounded-lg px-4 py-2 text-white hover:bg-indigo-700 dark:hover:bg-indigo-400 transition-all shadow-[0_4px_14px_0_rgba(79,70,229,0.39)]">
+                    <iconify-icon icon="solar:document-download-linear" class="text-base"></iconify-icon>
+                    Download resume
+                </a>
+                <a href="mailto:danilobrontolone37@gmail.com" class="flex items-center gap-2 text-sm bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-2 text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-800 transition-all shadow-sm">
+                    <iconify-icon icon="solar:letter-linear" class="text-base text-indigo-500 dark:text-indigo-400"></iconify-icon>
+                    danilobrontolone37@gmail.com
+                </a>
+                <div class="flex items-center gap-2 text-sm bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-2 text-slate-700 dark:text-slate-300 shadow-sm">
+                    <iconify-icon icon="solar:phone-linear" class="text-base text-indigo-500 dark:text-indigo-400"></iconify-icon>
+                    +1 (830) 223-8047
+                </div>
+                <div class="flex items-center gap-2 text-sm bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-2 text-slate-700 dark:text-slate-300 shadow-sm">
+                    <iconify-icon icon="solar:map-point-linear" class="text-base text-purple-500 dark:text-purple-400"></iconify-icon>
+                    Florence, Italy
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Projects -->
+        <section class="space-y-6">
+            <h3 class="text-xl font-medium tracking-tight text-slate-950 dark:text-slate-100">Recent Projects</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <!-- Project 1: Healthcare Intake Platform -->
+                <article class="group flex flex-col rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-emerald-300 dark:hover:border-emerald-500/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(16,185,129,0.05)] transition-all overflow-hidden">
+                    <a href="https://github.com/bigshark002/healthcare-intake-system-demo" target="_blank" rel="noopener noreferrer" class="block aspect-video w-full bg-slate-200/80 dark:bg-slate-800/80 overflow-hidden">
+                        <img src="images/healthcare-intake.png" alt="Healthcare Intake Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col gap-4 flex-1">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-sm font-medium tracking-tight text-slate-950 dark:text-slate-100">Healthcare Intake Platform</h4>
+                            <a href="https://github.com/bigshark002/healthcare-intake-system-demo" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-emerald-100 dark:hover:bg-emerald-500/20 text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                                <iconify-icon icon="solar:arrow-right-up-linear" class="text-base"></iconify-icon>
+                            </a>
+                        </div>
+                        <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">1. Problem</span>
+                                <p>Manual healthcare intake was slow, error-prone, and did not scale; staff spent many hours on repetitive intake and lookup tasks.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">2. Solution</span>
+                                <p><strong>Architecture:</strong> Multi-agent platform with dedicated intake, triage, and lookup agents; session memory; orchestrated workflows; voice agent. <strong>Key decisions:</strong> Persistent session memory; agent-based orchestration; RAG for document retrieval; voice interface for high-volume calls.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">3. My contribution</span>
+                                <p>Led design and implementation of the multi-agent OS and session memory on the core team; built orchestration and RAG pipelines; deployed the AI voice agent and streamlined document retrieval.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">4. Impact</span>
+                                <p><strong>Performance:</strong> ~20% end-to-end task efficiency improvement. <strong>Users:</strong> Voice agent handles 100+ calls/day. <strong>Accuracy:</strong> 85% intent accuracy; 15% improvement in document retrieval precision. <strong>Cost savings:</strong> 20% reduction in human workload; 10 hours/week saved on manual lookup.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap pt-1">
+                            <span class="text-xs font-mono tracking-tighter bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100/60 dark:border-indigo-500/20 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md">Python</span>
+                            <span class="text-xs font-mono tracking-tighter bg-purple-50 dark:bg-purple-500/10 border border-purple-100/60 dark:border-purple-500/20 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-md">Multi-Agent</span>
+                            <span class="text-xs font-mono tracking-tighter bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-100/60 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-md">Healthcare</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: RFP Proposal Generator -->
+                <article class="group flex flex-col rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-amber-300 dark:hover:border-amber-500/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(245,158,11,0.05)] transition-all overflow-hidden">
+                    <a href="https://github.com/bigshark002/Proposal-Generation-Backend" target="_blank" rel="noopener noreferrer" class="block aspect-video w-full bg-slate-200/80 dark:bg-slate-800/80 overflow-hidden">
+                        <img src="images/rfp-proposal.png" alt="RFP Proposal Generator Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col gap-4 flex-1">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-sm font-medium tracking-tight text-slate-950 dark:text-slate-100">RFP Proposal Generator Platform</h4>
+                            <a href="https://github.com/bigshark002/Proposal-Generation-Backend" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-amber-100 dark:hover:bg-amber-500/20 text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+                                <iconify-icon icon="solar:arrow-right-up-linear" class="text-base"></iconify-icon>
+                            </a>
+                        </div>
+                        <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">1. Problem</span>
+                                <p>Creating RFP responses was manual, slow, and inconsistent; teams needed to assemble proposals from many documents and stakeholders under tight deadlines.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">2. Solution</span>
+                                <p><strong>Architecture:</strong> Multi-agent system: document analysis agents, content-generation agents, structured proposal assembly pipeline. <strong>Key decisions:</strong> Agent-based document parsing and summarization; structured output for sections; template-driven assembly and versioning.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">3. My contribution</span>
+                                <p>Designed and built the multi-agent pipeline, document analysis and content-generation agents, and proposal assembly logic; integrated with existing templates and workflows.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">4. Impact</span>
+                                <p><strong>Performance:</strong> Faster proposal turnaround and consistent structure. <strong>Accuracy:</strong> Higher-quality, aligned content from source documents. <strong>Cost savings:</strong> Significant reduction in manual drafting and review cycles; teams can respond to more RFPs with the same headcount.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap pt-1">
+                            <span class="text-xs font-mono tracking-tighter bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100/60 dark:border-indigo-500/20 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md">Python</span>
+                            <span class="text-xs font-mono tracking-tighter bg-purple-50 dark:bg-purple-500/10 border border-purple-100/60 dark:border-purple-500/20 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-md">Multi-Agent</span>
+                            <span class="text-xs font-mono tracking-tighter bg-amber-50 dark:bg-amber-500/10 border border-amber-100/60 dark:border-amber-500/20 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-md">RFP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: MCP Agent Template -->
+                <article class="group flex flex-col rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-indigo-300 dark:hover:border-indigo-500/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(99,102,241,0.05)] transition-all overflow-hidden">
+                    <a href="https://github.com/bigshark002/MCP-Agent-Template" target="_blank" rel="noopener noreferrer" class="block aspect-video w-full bg-slate-200/80 dark:bg-slate-800/80 overflow-hidden">
+                        <img src="images/MCP_general_architecture-min.webp" alt="MCP Agent Template" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col gap-4 flex-1">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-sm font-medium tracking-tight text-slate-950 dark:text-slate-100">MCP Agent Template</h4>
+                            <a href="https://github.com/bigshark002/MCP-Agent-Template" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-indigo-100 dark:hover:bg-indigo-500/20 text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                                <iconify-icon icon="solar:arrow-right-up-linear" class="text-base"></iconify-icon>
+                            </a>
+                        </div>
+                        <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">1. Problem</span>
+                                <p>Teams needed a reusable way to build stateful multi-agent systems with context retention and tool use without rebuilding orchestration from scratch for each product.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">2. Solution</span>
+                                <p><strong>Architecture:</strong> Open-source orchestration engine with stateful workflow graph and checkpointing. <strong>Key decisions:</strong> LangGraph for state machines; pluggable context/memory and tool integrations.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">3. My contribution</span>
+                                <p>Designed and built the core orchestration engine, context/memory layer, and tool integration interface; maintained and evolved the open-source repo.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">4. Impact</span>
+                                <p>Enables faster delivery of multi-agent applications; used as the foundation for internal and community projects; reduced time-to-production for new agent workflows.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap pt-1">
+                            <span class="text-xs font-mono tracking-tighter bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100/60 dark:border-indigo-500/20 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md">Python</span>
+                            <span class="text-xs font-mono tracking-tighter bg-purple-50 dark:bg-purple-500/10 border border-purple-100/60 dark:border-purple-500/20 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-md">LangGraph</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Enterprise Search RAG -->
+                <article class="group flex flex-col rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-purple-300 dark:hover:border-purple-500/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(168,85,247,0.05)] transition-all overflow-hidden">
+                    <a href="https://github.com/bigshark002/enterprise-rag" target="_blank" rel="noopener noreferrer" class="block aspect-video w-full bg-slate-200/80 dark:bg-slate-800/80 overflow-hidden">
+                        <img src="images/enterprise-search-rag-components-1.jpg" alt="Enterprise Search RAG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col gap-4 flex-1">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-sm font-medium tracking-tight text-slate-950 dark:text-slate-100">Enterprise Search RAG</h4>
+                            <a href="https://github.com/bigshark002/enterprise-rag" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-purple-100 dark:hover:bg-purple-500/20 text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                <iconify-icon icon="solar:arrow-right-up-linear" class="text-base"></iconify-icon>
+                            </a>
+                        </div>
+                        <div class="space-y-3 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">1. Problem</span>
+                                <p>Enterprises could not efficiently search and retrieve relevant information across 100k+ documents with low latency and high precision.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">2. Solution</span>
+                                <p><strong>Architecture:</strong> Semantic search pipeline on Kubernetes: ingest → embed → vector store (Qdrant), query path with optional reranking. <strong>Key decisions:</strong> Rust for critical path; Qdrant for scale; K8s for deployment and scaling.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">3. My contribution</span>
+                                <p>Built the ingestion and embedding pipeline, vector store integration, and Kubernetes deployment; optimized for high throughput and sub-second query latency.</p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-slate-700 dark:text-slate-300">4. Impact</span>
+                                <p><strong>Scale:</strong> 100k+ documents searchable. <strong>Performance:</strong> Sub-second query latency. <strong>Accuracy:</strong> Improved retrieval precision via semantic search and reranking. <strong>Cost:</strong> Reduced manual lookup (e.g. 10+ hours/week saved in related use cases).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 flex-wrap pt-1">
+                            <span class="text-xs font-mono tracking-tighter bg-orange-50 dark:bg-orange-500/10 border border-orange-100/60 dark:border-orange-500/20 text-orange-700 dark:text-orange-300 px-2 py-0.5 rounded-md">Rust</span>
+                            <span class="text-xs font-mono tracking-tighter bg-blue-50 dark:bg-blue-500/10 border border-blue-100/60 dark:border-blue-500/20 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-md">Qdrant</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Core Skills -->
+        <section class="space-y-6">
+            <h3 class="text-xl font-medium tracking-tight text-slate-950 dark:text-slate-100">Technical Expertise</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-indigo-300 dark:hover:border-indigo-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(99,102,241,0.05)] transition-all group">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:cpu-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">AI &amp; Architecture</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        LLMs, RAG Pipelines, Multi-Agent Systems, LangChain, Lang Flow, Contextual Memory.
+                    </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-purple-300 dark:hover:border-purple-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(168,85,247,0.05)] transition-all group">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:server-square-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">Languages &amp; Backend</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Python, Rust, TypeScript, Flask, FastAPI, Django, REST, GraphQL.
+                    </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-blue-300 dark:hover:border-blue-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(59,130,246,0.05)] transition-all group">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:database-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">ML / DL</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Deep Learning, Scikit-learn, Pandas, PyTorch, TensorFlow, Semantic Search.
+                    </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-cyan-300 dark:hover:border-cyan-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(6,182,212,0.05)] transition-all group">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-100 dark:bg-cyan-500/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:cloud-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">Cloud &amp; DevOps</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Docker, Kubernetes, AWS, GCP, Azure, BigQuery, CI/CD.
+                    </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md hover:border-emerald-300 dark:hover:border-emerald-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:hover:shadow-[0_8px_30px_rgba(16,185,129,0.05)] transition-all group">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="solar:graph-up-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">MLOps</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        MLflow, Kubeflow, DVC, Experiment Tracking, Model Registry, Feature Stores, Model Serving, Monitoring.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Thinking -->
+        <section class="space-y-6">
+            <div>
+                <h3 class="text-xl font-medium tracking-tight text-slate-950 dark:text-slate-100">Engineering Thinking</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-500 mt-1">How I approach system design, tradeoffs, and hard problems—not just what I built.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                            <iconify-icon icon="solar:diagram-up-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">Architecture &amp; system design</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+                        I sketch flows before coding: orchestrator → agents → contracts. For healthcare intake, that meant <strong class="text-slate-700 dark:text-slate-300">Patient Input → Orchestrator → [Intake → Triage → Routing] → structured result</strong>. Clear boundaries between agents (Pydantic models, explicit handoffs) keep systems testable and debuggable at scale.
+                    </p>
+                    <p class="text-xs text-slate-500 dark:text-slate-500">
+                        I use simple ASCII or Mermaid-style diagrams in docs and ADRs so the “why” is visible to the whole team.
+                    </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                            <iconify-icon icon="solar:scale-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">Tradeoffs &amp; technology choices</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+                        <strong class="text-slate-700 dark:text-slate-300">Why LangGraph for multi-agent:</strong> stateful graphs and checkpointing beat ad‑hoc chains when workflows get complex. <strong class="text-slate-700 dark:text-slate-300">Why Rust on the RAG path:</strong> latency-sensitive ingest and search needed a single binary and predictable performance. <strong class="text-slate-700 dark:text-slate-300">Why rule-based fallback in healthcare:</strong> systems can’t just fail when the LLM is down—conservative triage + human-review flags keep safety first.
+                    </p>
+                    <p class="text-xs text-slate-500 dark:text-slate-500">
+                        I document “why not X” as much as “why Y” so future changes don’t repeat past mistakes.
+                    </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400">
+                            <iconify-icon icon="solar:bug-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">Challenges &amp; how I solved them</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+                        <strong class="text-slate-700 dark:text-slate-300">LLM output parsing:</strong> model sometimes returned markdown-wrapped JSON or extra text. Fixed with strict prompts, examples, Pydantic validation, and a fallback parser. <strong class="text-slate-700 dark:text-slate-300">Urgency classification drift:</strong> same symptoms, different phrasings → inconsistent levels. Added red-flag keyword detection and explicit criteria in the prompt. <strong class="text-slate-700 dark:text-slate-300">RAG precision:</strong> improved retrieval from ~60% to 75%+ with better chunking, embeddings, and optional reranking—measured so we could iterate.
+                    </p>
+                    <p class="text-xs text-slate-500 dark:text-slate-500">
+                        I treat production issues as a feedback loop: add logging, metrics, and tests so the next failure is easier to diagnose.
+                    </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/50 backdrop-blur-md">
+                    <div class="flex items-center gap-3 mb-3 text-slate-900 dark:text-slate-200">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                            <iconify-icon icon="solar:graph-up-linear" class="text-lg"></iconify-icon>
+                        </div>
+                        <h4 class="text-sm font-medium">Scalability awareness</h4>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        I design for growth from the start: stateless agents so we can scale horizontally; vector search (e.g. Qdrant) and K8s for 100k+ docs; cost and latency budgets (e.g. token estimation, sub-second p95). I add observability early—structured logs, metrics, and alarms (error rate, latency, confidence)—so we see regressions before users do.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="pt-10 border-t border-slate-200 dark:border-slate-800/60 flex flex-col gap-6">
+            <div>
+                <h3 class="text-xl font-medium tracking-tight text-slate-950 dark:text-slate-100">Contact</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Open to AI engineering roles focused on LLMs, multi-agent systems, and workflow automation.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="mailto:danilobrontolone37@gmail.com" class="flex items-center justify-center gap-2 text-sm bg-indigo-600 dark:bg-indigo-500 border border-transparent rounded-lg px-4 py-3 text-white hover:bg-indigo-700 dark:hover:bg-indigo-400 transition-all shadow-[0_4px_14px_0_rgba(79,70,229,0.39)]">
+                    <iconify-icon icon="solar:letter-linear" class="text-base"></iconify-icon>
+                    danilobrontolone37@gmail.com
+                </a>
+                <div class="flex items-center justify-center gap-2 text-sm bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 text-slate-700 dark:text-slate-300 shadow-sm">
+                    <iconify-icon icon="solar:phone-linear" class="text-base text-indigo-500 dark:text-indigo-400"></iconify-icon>
+                    +1 (830) 223-8047
+                </div>
+                <div class="flex items-center justify-center gap-2 text-sm bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 text-slate-700 dark:text-slate-300 shadow-sm">
+                    <iconify-icon icon="solar:link-minimalistic-linear" class="text-base text-purple-500 dark:text-purple-400"></iconify-icon>
+                    <a href="https://www.linkedin.com/in/danilo-brontolone-8a8258370/" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">LinkedIn profile</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="space-y-8">
+            <h3 class="text-xl font-medium tracking-tight text-slate-950 dark:text-slate-100">Experience</h3>
+
+            <div class="space-y-16 border-l border-slate-200 dark:border-slate-800/60 ml-2 pl-6 sm:pl-8 relative">
+                
+                <!-- NovaMind -->
+                <div class="relative group">
+                    <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 w-2.5 h-2.5 rounded-full border-2 border-indigo-500 bg-slate-50 group-hover:bg-indigo-500 dark:border-indigo-400 dark:bg-slate-950 dark:group-hover:bg-indigo-400 transition-colors shadow-[0_0_0_4px_rgba(99,102,241,0.1)] dark:shadow-[0_0_0_4px_rgba(129,140,248,0.1)]"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-4 gap-2">
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-slate-950 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Senior AI Engineer</h4>
+                            <div class="text-sm text-slate-500 dark:text-slate-500 mt-1">NovaMind Inc <span class="mx-1">·</span> Wilmington, USA</div>
+                        </div>
+                        <span class="text-xs text-indigo-600 bg-indigo-50 border border-indigo-100 dark:bg-indigo-500/10 dark:border-indigo-500/20 dark:text-indigo-400 px-2 py-1 rounded-md font-mono tracking-tighter shadow-sm">03/2023 - 12/2025</span>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3">
+                        <li class="flex items-start gap-3 group/item">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-indigo-400 dark:text-indigo-500 mt-0.5 shrink-0 opacity-70 group-hover/item:opacity-100 transition-opacity"></iconify-icon>
+                            <span class="leading-relaxed">Led design and implementation of <span class="text-slate-900 dark:text-slate-200 font-normal">multi-agent OS and session memory</span> on a 3-person core team, enhancing healthcare intake efficiency.</span>
+                        </li>
+                        <li class="flex items-start gap-3 group/item">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-indigo-400 dark:text-indigo-500 mt-0.5 shrink-0 opacity-70 group-hover/item:opacity-100 transition-opacity"></iconify-icon>
+                            <span class="leading-relaxed">Automated complex healthcare processes via multi-agent orchestration, refining end-to-end task efficiency by <span class="text-slate-900 dark:text-slate-200 font-normal">~20%</span>.</span>
+                        </li>
+                        <li class="flex items-start gap-3 group/item">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-indigo-400 dark:text-indigo-500 mt-0.5 shrink-0 opacity-70 group-hover/item:opacity-100 transition-opacity"></iconify-icon>
+                            <span class="leading-relaxed">Streamlined RAG pipelines, increasing document retrieval precision by <span class="text-slate-900 dark:text-slate-200 font-normal">15%</span> and saving <span class="text-slate-900 dark:text-slate-200 font-normal">10 hours/week</span> of manual lookup.</span>
+                        </li>
+                        <li class="flex items-start gap-3 group/item">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-indigo-400 dark:text-indigo-500 mt-0.5 shrink-0 opacity-70 group-hover/item:opacity-100 transition-opacity"></iconify-icon>
+                            <span class="leading-relaxed">Deployed AI voice agent managing <span class="text-slate-900 dark:text-slate-200 font-normal">100 calls/day</span>, achieving <span class="text-slate-900 dark:text-slate-200 font-normal">85% intent accuracy</span> and reducing human workload by 20%.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cognitiva Labs -->
+                <div class="relative group">
+                    <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 w-2.5 h-2.5 rounded-full border-2 border-slate-300 bg-slate-50 group-hover:bg-slate-300 dark:border-slate-600 dark:bg-slate-950 dark:group-hover:bg-slate-600 transition-colors"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-4 gap-2">
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-slate-950 dark:text-slate-100">AI Engineer</h4>
+                            <div class="text-sm text-slate-500 dark:text-slate-500 mt-1">Cognitiva Labs <span class="mx-1">·</span> Warsaw, Poland</div>
+                        </div>
+                        <span class="text-xs text-slate-500 bg-slate-100 border border-slate-200 dark:bg-slate-800/50 dark:border-slate-700/50 dark:text-slate-400 px-2 py-1 rounded-md font-mono tracking-tighter">01/2022 - 01/2023</span>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Scaled conversational AI platforms serving <span class="text-slate-900 dark:text-slate-200 font-normal">2k-5k MAU</span>, boosting average response accuracy by <span class="text-slate-900 dark:text-slate-200 font-normal">15%</span> via model tuning.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Built AI-driven analytics pipelines, drastically reducing report generation cycles from <span class="text-slate-900 dark:text-slate-200 font-normal">3 days to 8 hours</span>.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Applied text embedding and semantic search, improving document retrieval precision from <span class="text-slate-900 dark:text-slate-200 font-normal">60% to 75%</span>.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Helix Data Solutions -->
+                <div class="relative group">
+                    <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 w-2.5 h-2.5 rounded-full border-2 border-slate-300 bg-slate-50 group-hover:bg-slate-300 dark:border-slate-600 dark:bg-slate-950 dark:group-hover:bg-slate-600 transition-colors"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-4 gap-2">
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-slate-950 dark:text-slate-100">Machine Learning &amp; Backend Engineer</h4>
+                            <div class="text-sm text-slate-500 dark:text-slate-500 mt-1">Helix Data Solutions SRL <span class="mx-1">·</span> Milan, Italy</div>
+                        </div>
+                        <span class="text-xs text-slate-500 bg-slate-100 border border-slate-200 dark:bg-slate-800/50 dark:border-slate-700/50 dark:text-slate-400 px-2 py-1 rounded-md font-mono tracking-tighter">12/2020 - 12/2021</span>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Deployed ML models that increased prediction accuracy across client pipelines by <span class="text-slate-900 dark:text-slate-200 font-normal">15%</span>.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Built and deployed REST services handling <span class="text-slate-900 dark:text-slate-200 font-normal">~2,000 requests/day</span>, reducing client response times by 20%.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Implemented CI/CD pipelines for ML services, reducing deployment errors by <span class="text-slate-900 dark:text-slate-200 font-normal">30%</span>.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Aquila AI -->
+                <div class="relative group">
+                    <div class="absolute -left-[29px] sm:-left-[37px] top-1.5 w-2.5 h-2.5 rounded-full border-2 border-slate-300 bg-slate-50 group-hover:bg-slate-300 dark:border-slate-600 dark:bg-slate-950 dark:group-hover:bg-slate-600 transition-colors"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-4 gap-2">
+                        <div>
+                            <h4 class="text-lg font-medium tracking-tight text-slate-950 dark:text-slate-100">ML / DL Engineer</h4>
+                            <div class="text-sm text-slate-500 dark:text-slate-500 mt-1">Aquila AI Research <span class="mx-1">·</span> Florence, Italy</div>
+                        </div>
+                        <span class="text-xs text-slate-500 bg-slate-100 border border-slate-200 dark:bg-slate-800/50 dark:border-slate-700/50 dark:text-slate-400 px-2 py-1 rounded-md font-mono tracking-tighter">10/2018 - 11/2020</span>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Processed and labeled <span class="text-slate-900 dark:text-slate-200 font-normal">1M+ text records</span> to support large-scale model training.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0"></iconify-icon>
+                            <span class="leading-relaxed">Expanded learning pipelines, reducing feature extraction and preprocessing time by <span class="text-slate-900 dark:text-slate-200 font-normal">15%</span>.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="pt-8 border-t border-slate-200 dark:border-slate-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-sm">
+                    <iconify-icon icon="solar:diploma-verified-linear" class="text-xl"></iconify-icon>
+                </div>
+                <div>
+                    <h3 class="text-base font-medium text-slate-950 dark:text-slate-100">Bachelor, Computer Science</h3>
+                    <p class="text-sm text-slate-500 mt-0.5">University of Florence</p>
+                </div>
+            </div>
+            <span class="text-xs text-slate-500 font-mono tracking-tighter bg-white/60 dark:bg-slate-800/50 backdrop-blur-md px-2 py-1 rounded-md border border-slate-200 dark:border-slate-700/50">03/2014 - 11/2018</span>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800/60 bg-white/60 dark:bg-slate-950/60">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-500">
+            <span>© <span id="year-span">2026</span> Danilo Brontolone. All rights reserved.</span>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/bigshark002" target="_blank" class="flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <iconify-icon icon="solar:code-square-linear" class="text-sm"></iconify-icon>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/danilo-brontolone-8a8258370/" target="_blank" class="flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <iconify-icon icon="solar:link-minimalistic-linear" class="text-sm"></iconify-icon>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:danilobrontolone37@gmail.com" class="flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <iconify-icon icon="solar:letter-linear" class="text-sm"></iconify-icon>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+        <script>
+            const yearSpan = document.getElementById('year-span');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        </script>
+    </footer>
+
+</body></html>
